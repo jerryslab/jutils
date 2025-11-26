@@ -9,35 +9,56 @@ PREFIX  := /usr/local
 BINDIR  := $(PREFIX)/bin
 
 # ---- C Programs ----
-CBINS := clipit kernmem swapmon
+C_PROGS := clipit kernmem swapout
 
-# ---- Script Programs (installed as-is) ----
-SCRIPTS := toolchain-env.sh kernel_cleanup.sh
+# ---- Shell scripts ----
+SH_SCRIPTS := toolchain-env.sh kernel_cleanup.sh
 
 # ---- All programs ----
-PROGS := $(CBINS) $(SCRIPTS)
+PROGS := $(C_PROGS) $(SH_SCRIPTS)
 
-all: $(CBINS)
+# ---- Default rule ----
+all: $(C_PROGS)
 
-# ---- Build C binaries ----
+# ---- C program build rules ----
 clipit: clipit.c
 	$(CC) $(CFLAGS) -o $@ $<
 
 kernmem: kernmem.c
 	$(CC) $(CFLAGS) -o $@ $<
 
-swapmon: swapmon.c
+swapout: swapout.c
 	$(CC) $(CFLAGS) -o $@ $<
 
-# ---- Install ----
+# ---- Installation ----
 install: $(PROGS)
 	install -d $(BINDIR)
-	install -m 0755 $(CBINS) $(BINDIR)
-	install -m 0755 $(SCRIPTS) $(BINDIR)
+	install -m 0755 $(C_PROGS) $(BINDIR)
+	install -m 0755 $(SH_SCRIPTS) $(BINDIR)
 
-# ---- Clean ----
+# ---- Uninstall ----
+uninstall:
+	cd $(BINDIR) && rm -f $(PROGS)
+
+# ---- Cleaning ----
 clean:
-	rm -f $(CBINS) *.o
+	rm -f $(C_PROGS) *.o
 
-.PHONY: all clean install
+# ---- Dry run ----
+dry-run:
+	@echo "C compiler: $(CC)"
+	@echo "C flags:    $(CFLAGS)"
+	@echo "C programs that would be built:"
+	@for p in $(C_PROGS); do \
+		echo "  - $$p (from $$p.c)"; \
+	done
+	@echo
+	@echo "Shell scripts included:"
+	@for s in $(SH_SCRIPTS); do \
+		echo "  - $$s"; \
+	done
+	@echo
+	@echo "No files were built (dry-run only)."
+
+.PHONY: all clean install uninstall dry-run
 
