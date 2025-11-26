@@ -198,19 +198,29 @@ You should see output along the lines of....
 
 
    [+] swapout: targeting PID 12345
+
    [+] limit_mb=8, target_rss_kb=16384, interval=1.00, max_iter=60
+
    [+] cgroup v2 detected, using /sys/fs/cgroup/swapout/12345
+
    [+] Original limit at /sys/fs/cgroup/swapout/12345/memory.high: 'max'
+
    [+] Moved PID 12345 into /sys/fs/cgroup/swapout/12345
+
    [+] Applying temporary limit 8388608
     to /sys/fs/cgroup/swapout/12345/memory.high
+
    [+] Forcing swap... polling process memory usage
      iter  1: RSS=188000 kB, SWAP=0 kB
      iter  2: RSS=120000 kB, SWAP=64000 kB
      ...
+
    [+] Target RSS reached (<= 16384 kB), stopping.
+
    [+] Restoring limit at /sys/fs/cgroup/swapout/12345/memory.high to 'max'
+
    [+] Removed cgroup /sys/fs/cgroup/swapout/12345
+
    [+] swapout complete.
 
 
