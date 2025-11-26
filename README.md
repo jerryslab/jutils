@@ -114,3 +114,24 @@ for me this helps keep things a little more tidy.
   Example: ./kernel_cleanup.sh 6.16.5-jerryslab.patch-GIT12-v3.16+
 
 
+## Swapmon
+
+Fun little tool that will show what processes are actually swapped out.
+
+Usage:
+
+Default: simple table → PID SWAP(kB) CMD
+
+* --full / -f: more columns → PID SWAP RSS VSZ CMD
+
+* --json / -j: JSON snapshot
+
+* --top / -t: continuously refreshing view (like top)
+
+* --delay / -d SECS: refresh interval in --top mode (default 2s)
+
+* --count / -n N: number of iterations in --top mode (default: infinite until Ctrl+C)
+
+* --help / -h: usage
+
+Swapmon only shows processes with VmSWAP > 0, i.e. actually in swap.
