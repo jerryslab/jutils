@@ -1,25 +1,23 @@
- # JUTILS
-
+# **JUTILS**
 
  
-Various command line utilities to make a sysad's life easier.  The commands
-are as follows 
+_Various command line utilities to make a sysad's life easier._  
 
 #######################################################################
 
-_ KERNMEM:
+##KERNMEM:
 
 Computes a practical, real-world estimate of total kernel memory usage using
 /proc
 It gathers:
 
- Kernel code
- Kernel data
- Kernel bss
- Slab (total, reclaimable, unreclaimable)
- Page tables
- Vmalloc allocations
- Total module memory (lsmod equivalent parsing /proc/modules)
+### Kernel code
+### Kernel data
+### Kernel bss
+### Slab (total, reclaimable, unreclaimable)
+### Page tables
+### Vmalloc allocations
+### Total module memory (lsmod equivalent parsing /proc/modules)
 
 And prints subtotals + grand total and workd on any linux kernel that supports
 /proc/meminfo and /proc/modules.
@@ -36,7 +34,7 @@ System.map in case kernel address space layout randomization cock-blocks ya. ;-)
 
 #######################################################################
 
-CLIPIT - OSC-52 clipboard copier.
+##CLIPIT - OSC-52 clipboard copier.
 
 Is a fully standalone, dependency-free OSC-52 clipboard utility written in pure C, 
 including its own Base64 encoder.  It reads any size input (configurable), 
@@ -60,7 +58,7 @@ As long as your terminal supports pasting large payloads, you're good.
 
 #######################################################################
 
-:toolchain-env.sh - cross-compile toolchain set-up.
+##toolchain-env.sh - cross-compile toolchain set-up.
 
 This shell script will provide all the environment variables with paths
 for your toolchian of choice for all your cross-compiiling needs.
@@ -75,15 +73,15 @@ to look...
 from your shell you will have a "tc" function to manage cross-compiler 
 environments:
 
-   tc list              - list discovered toolchains (triples and roots)
-   tc use <triple|path> - activate toolchain by triple or by path to its root/bin/<triple>-gcc
-   tc which             - print current CC/CXX/CROSS_COMPILE
-   tc off               - restore environment to pre-toolchain state
+*   tc list              - list discovered toolchains (triples and roots)
+*   tc use <triple|path> - activate toolchain by triple or by path to its root/bin/<triple>-gcc
+*   tc which             - print current CC/CXX/CROSS_COMPILE
+*   tc off               - restore environment to pre-toolchain state
 
 You can set TOOLCHAIN_DIRS (colon-separated) to where your toolchains live.
 Defaults search to: "$HOME/x-tools:/opt:/usr/local:/opt/toolchains"
 
- Robust features:
+### Robust features:
  - Accepts version-suffixed executables (e.g. <triple>-gcc-12.2.0)
  - Works with GCC or Clang layouts
  - Can resolve by explicit path or by triple name
@@ -108,7 +106,7 @@ Example:
 
 #######################################################################
 
-:Kernel Cleanup
+##Kernel Cleanup
 
 Script to clean up old custom kernels and their modules by creating a
 <kernel_ver>.tar.xz in a designated directory and then prompting for 
