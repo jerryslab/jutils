@@ -116,6 +116,7 @@ the removal of said kernel and modules.  I do all custom kernels so
 for me this helps keep things a little more tidy.
 
   Usage: ./kernel_cleanup.sh <kernel-version>
+
   Example: ./kernel_cleanup.sh 6.16.5-jerryslab.patch-GIT12-v3.16+
 
 #######################################################################
