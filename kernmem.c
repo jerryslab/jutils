@@ -1,5 +1,5 @@
 /*
- * kernelmem3.c
+ * kernmem.c
  *
  * Estimate Linux kernel memory usage.
  *
@@ -14,10 +14,10 @@
  * - Module memory from /proc/modules
  *
  * Build:
- *     gcc -O2 -o kernelmem3 kernelmem3.c
+ *     gcc -O2 -o kernmem kernelmem3.c
  *
  * Run:
- *     ./kernelmem3
+ *     ./kernmem
  */
 
 #include <stdio.h>
@@ -184,7 +184,7 @@ int main(void) {
     if (modules_kb > 0)
         grand_total_kb += modules_kb;
 
-    printf("========== Linux Kernel Memory Usage (kernelmem3) ==========\n\n");
+    printf("========== Linux Kernel Memory Usage (kernmem) ==========\n\n");
 
     if (static_ok == 0) {
         printf("Static kernel ELF sections (.text/.data/.bss):\n");
