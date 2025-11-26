@@ -101,3 +101,16 @@ Example:
 
 
 #######################################################################
+
+:Kernel Cleanup
+
+Script to clean up old custom kernels and their modules by creating a
+<kernel_ver>.tar.xz in a designated directory and then prompting for 
+the removal of said kernel and modules.  I do all custom kernels so
+for me this helps keep things a little more tidy.
+
+  Usage: ./kernel_cleanup.sh <kernel-version>
+  Example: ./kernel_cleanup.sh 6.16.5-jerryslab.patch-GIT12-v3.16+
+
+#######################################################################
+
