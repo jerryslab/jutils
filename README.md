@@ -7,7 +7,7 @@ are as follows
 
 #######################################################################
 
-KERNMEM:
+_ KERNMEM:
 
 Computes a practical, real-world estimate of total kernel memory usage using
 /proc
