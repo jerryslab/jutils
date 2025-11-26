@@ -135,3 +135,35 @@ Default: simple table → PID SWAP(kB) CMD
 * --help / -h: usage
 
 Swapmon only shows processes with VmSWAP > 0, i.e. actually in swap.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Notes
+
+To compile and install 
+
+  make
+
+  make install
+
+To start over
+
+  make clean
+
+.. removes only the compiled C programs, not the scripts of course.
