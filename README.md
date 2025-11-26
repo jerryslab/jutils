@@ -2,7 +2,7 @@
 
 
  
-Various command line utilities to make sysad's life easier.  The commands
+Various command line utilities to make a sysad's life easier.  The commands
 are as follows 
 
 #######################################################################
