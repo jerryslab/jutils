@@ -106,7 +106,7 @@ Example:
 
 #######################################################################
 
-##Kernel Cleanup
+## Kernel Cleanup
 
 Script to clean up old custom kernels and their modules by creating a
 <kernel_ver>.tar.xz in a designated directory and then prompting for 
