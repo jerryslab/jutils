@@ -5,7 +5,7 @@ _Various command line utilities to make a sysad's life easier._
 
 #######################################################################
 
-##KERNMEM:
+## KERNMEM:
 
 Computes a practical, real-world estimate of total kernel memory usage using
 /proc
@@ -34,7 +34,7 @@ System.map in case kernel address space layout randomization cock-blocks ya. ;-)
 
 #######################################################################
 
-##CLIPIT - OSC-52 clipboard copier.
+## CLIPIT - OSC-52 clipboard copier.
 
 Is a fully standalone, dependency-free OSC-52 clipboard utility written in pure C, 
 including its own Base64 encoder.  It reads any size input (configurable), 
@@ -58,7 +58,7 @@ As long as your terminal supports pasting large payloads, you're good.
 
 #######################################################################
 
-##toolchain-env.sh - cross-compile toolchain set-up.
+## TOOLCHAIN ENV - a cross-compile toolchain set-up environment.
 
 This shell script will provide all the environment variables with paths
 for your toolchian of choice for all your cross-compiiling needs.
