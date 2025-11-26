@@ -137,10 +137,38 @@ Default: simple table → PID SWAP(kB) CMD
 Swapmon only shows processes with VmSWAP > 0, i.e. actually in swap.
 
 
+## Swapout - 
 
+### Utility to swap out a process.
 
+* Force a process's memory to be pushed into swap by constraining it
+   to a small-memory cgroup, then restoring the limit afterwards.
+  
+* Requires root (or sufficient privileges to manage cgroups and move PIDs).
+ 
 
+  Usage:
+   swapout PID [options]
+ 
+  Options:
+    -m, --limit-mb MB       Memory limit during swapout (default: 8 MB)
+    -r, --target-rss-kb KB  Target RSS to reach before stopping (default: 16384 kB)
+    -i, --interval SECS     Poll interval in seconds (default: 1.0)
+    -n, --max-iter N        Maximum iterations before giving up (default: 60)
+    -q, --quiet             Less verbose output
+    -h, --help              Show this help
 
+how it works...
+
+* Puts a target PID into a temporary cgroup
+
+* Applies a tight memory limit to force swapping
+
+* Polls /proc/<pid>/status to watch VmRSS/VmSwap
+
+* Restores the memory limit and cleans up
+
+It supports both cgroup v1 (memory) and cgroup v2 (unified).
 
 
 
