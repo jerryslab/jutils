@@ -9,7 +9,7 @@ PREFIX  := /usr/local
 BINDIR  := $(PREFIX)/bin
 
 # ---- C Programs ----
-C_PROGS := clipit kernmem swapout
+C_PROGS := clipit kernmem swapout swapmon
 
 # ---- Shell scripts ----
 SH_SCRIPTS := toolchain-env.sh kernel_cleanup.sh
