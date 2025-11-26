@@ -18,6 +18,10 @@
  *
  * Run:
  *     ./kernmem
+ *
+ * Author: Jerry Richardson <jerry@jerryslab.com>
+ * Copyright (C) 2025
+ *
  */
 
 #include <stdio.h>
