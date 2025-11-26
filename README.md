@@ -92,11 +92,17 @@ Defaults search to: "$HOME/x-tools:/opt:/usr/local:/opt/toolchains"
 
 Example:
    . ./toolchain-env.sh
+   
    export TOOLCHAIN_DIRS="$HOME/x-tools:/opt/ctng"
+   
    tc list
+   
    tc use aarch64-linux-gnu
+   
    tc which
+   
    make ARCH=arm64 CROSS_COMPILE="$CROSS_COMPILE" -j"$(nproc)"
+   
    tc off
 
 
