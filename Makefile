@@ -9,7 +9,7 @@ PREFIX  := /usr/local
 BINDIR  := $(PREFIX)/bin
 
 # ---- Programs ----
-PROGS := clipit kernmem
+PROGS := clipit kernmem toolchain-env.sh kernel_cleanup.sh
 
 all: $(PROGS)
 
