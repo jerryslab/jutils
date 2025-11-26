@@ -3,7 +3,6 @@
  
 _Various command line utilities to make a sysad's life easier._  
 
-#######################################################################
 
 ## KERNMEM:
 
@@ -32,7 +31,6 @@ KernelData and KernelBss.  In this case it will try to read from /proc/kallsyms 
 System.map in case kernel address space layout randomization cock-blocks ya. ;-)
 
 
-#######################################################################
 
 ## CLIPIT - OSC-52 clipboard copier.
 
@@ -56,7 +54,6 @@ Clipit will work in the following terminals
 
 As long as your terminal supports pasting large payloads, you're good.
 
-#######################################################################
 
 ## TOOLCHAIN ENV - a cross-compile toolchain set-up environment.
 
@@ -104,7 +101,6 @@ Example:
    tc off
 
 
-#######################################################################
 
 ## Kernel Cleanup
 
@@ -117,5 +113,4 @@ for me this helps keep things a little more tidy.
 
   Example: ./kernel_cleanup.sh 6.16.5-jerryslab.patch-GIT12-v3.16+
 
-#######################################################################
 
