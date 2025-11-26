@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 # toolchain-env.sh
 # Source me:  . /path/to/toolchain-env.sh
+#
+# Author Jerry Richardson
+# (C) Copyright 20205
+#
 # Provides a "tc" function to manage cross-compiler environments:
 #   tc list              - list discovered toolchains (triples and roots)
 #   tc use <triple|path> - activate toolchain by triple or by path to its root/bin/<triple>-gcc
